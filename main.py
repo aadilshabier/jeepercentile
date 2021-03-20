@@ -9,16 +9,16 @@ def percentile(x, rank):
 
 
 def main():
-    x = np.arange(expected_students_lower, expected_students_upper, 1)
+    x = np.arange(expected_students_lower, expected_students_upper, 10_000)
 
     plt.style.use(style)
     for rank in np.linspace(starting_rank, ending_rank, no_of_plots):
-        plt.plot(x, percentile(x, round(rank)), label=f"{round(rank)}")
+        plt.plot(x/100_000, percentile(x, round(rank)), label=f"{round(rank)}")
 
     plt.title("JEE Percentile")
     plt.legend(title='Ranks', loc='upper right')
-    plt.xlabel("Expected candidates")
-    plt.ylabel("Percentile %")
+    plt.xlabel("Expected candidates (lakhs)")
+    plt.ylabel("Percentile (%)")
     plt.ylim(top=100)
 
     plt.show()
