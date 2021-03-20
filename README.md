@@ -1,6 +1,6 @@
-# JEE Percentile Vizualizer
+# JEE Percentile Visualizer
 
-A simple project to vizualize your JEE percentile for different ranks and plot them against the number of students writing the exam for different expected scores.
+A simple project to visualize your JEE percentile for different ranks and plot them against the number of students writing the exam for different expected scores.
 
 ### Prerequisites
 
