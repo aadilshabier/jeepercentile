@@ -1,5 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
+from config import starting_rank, ending_rank, \
+    no_of_plots, expected_students_lower, expected_students_upper
 
 
 def percentile(x, rank):
