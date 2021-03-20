@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 from config import starting_rank, ending_rank, \
-    no_of_plots, expected_students_lower, expected_students_upper
+    no_of_plots, expected_students_lower, expected_students_upper, style
 
 
 def percentile(x, rank):
@@ -11,6 +11,7 @@ def percentile(x, rank):
 def main():
     x = np.arange(expected_students_lower, expected_students_upper, 1)
 
+    plt.style.use(style)
     for rank in np.linspace(starting_rank, ending_rank, no_of_plots):
         plt.plot(x, percentile(x, round(rank)), label=f"{round(rank)}")
 
