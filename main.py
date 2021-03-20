@@ -16,8 +16,7 @@ def main():
     x = np.arange(expected_students_lower, expected_students_upper, 1)
 
     for rank in np.linspace(starting_rank, ending_rank, no_of_plots):
-        rank = round(rank)
-        plt.plot(x, f(x, rank), label=f"{rank}")
+        plt.plot(x, f(x, round(rank)), label=f"{rank}")
 
     plt.title("JEE Percentile")
     plt.legend()
