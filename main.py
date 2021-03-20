@@ -9,15 +9,20 @@ expected_students_upper = 610_000
 
 
 def f(x, rank):
-    return (x-i)/x*100
+    return (x-rank)/x*100
 
 
 def main():
     x = np.arange(expected_students_lower, expected_students_upper, 1)
 
-    for rank in np.linspace(starting_rank, ending_rank+1, no_of_plots):
+    for rank in np.linspace(starting_rank, ending_rank, no_of_plots):
+        rank = round(rank)
         plt.plot(x, f(x, rank), label=f"{rank}")
+
+    plt.title("JEE Percentile")
     plt.legend()
+    plt.xlabel("Expected candidates")
+    plt.ylabel("Percentile %")
 
     plt.show()
 
