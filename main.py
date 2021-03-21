@@ -13,7 +13,8 @@ def main():
 
     plt.style.use(style)
     for rank in np.linspace(starting_rank, ending_rank, no_of_plots):
-        plt.plot(x/100_000, percentile(x, round(rank)), label=f"{round(rank)}")
+        plt.plot(x/100_000, percentile(x, round(rank)),
+                 label=f"{round(rank)}", linewidth=3)
 
     plt.title("JEE Percentile")
     plt.legend(title='Ranks', loc='upper right')
