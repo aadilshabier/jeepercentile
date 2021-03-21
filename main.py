@@ -9,7 +9,7 @@ def percentile(x, rank):
 
 
 def main():
-    x = np.arange(expected_students_lower, expected_students_upper, 10_000)
+    x = np.arange(expected_students_lower, expected_students_upper+1, 10_000)
 
     plt.style.use(style)
     for rank in np.linspace(starting_rank, ending_rank, no_of_plots):
