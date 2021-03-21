@@ -2,7 +2,7 @@
 
 A simple project to visualize your JEE percentile for different ranks and plot them against the number of students writing the exam for different expected scores.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ### Prerequisites
 
