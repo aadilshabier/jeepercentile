@@ -11,8 +11,10 @@ def percentile(x, rank):
 def main():
     x = np.arange(expected_students_lower, expected_students_upper+1, 10000)
 
-    if style in plt.style.available:
+    try:
         plt.style.use(style)
+    except Exception as _:
+        print("Could not load style: {}, switching to default".format(style))
     for rank in np.linspace(starting_rank, ending_rank, no_of_plots):
         plt.plot(x/100000, percentile(x, round(rank)),
                  label="{}".format(round(rank)), linewidth=3)
