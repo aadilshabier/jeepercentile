@@ -19,7 +19,8 @@ def main():
         plt.plot(x/100000, percentile(x, round(rank)),
                  label="{}".format(round(rank)), linewidth=3)
 
-    plt.title("JEE Percentile")
+    plt.suptitle("JEE Percentile")
+    plt.title("Percentile vs Candidates")
     plt.legend(title='Ranks', loc='upper right')
     plt.xlabel("Expected candidates (lakhs)")
     plt.ylabel("Percentile (%)")
